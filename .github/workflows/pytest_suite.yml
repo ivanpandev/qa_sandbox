@@ -1,4 +1,4 @@
-name: pytest suite windows
+name: pytest suite ubuntu
 
 on:
   push:
