@@ -14,7 +14,6 @@ cycler==0.11.0
 DateTime==4.5
 dbus-python==1.2.16
 distro==1.4.0
-distro-info===0.23ubuntu1
 docutils==0.16
 entrypoints==0.3
 fonttools==4.34.4
