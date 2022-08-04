@@ -14,5 +14,6 @@ def test_basic_DI_compare():
     ground_truth = DI.DataIntegrity(DI.log_to_object('ground_truth.log', 0, 2), name='ground_truth', sampled='N')
     returned_data = DI.DataIntegrity(DI.csv_to_object('latest.csv', 5, 6), name='tile', sampled='N')
     results = ground_truth.compare(returned_data)
+    print(f'The Match Score is: {results[0]}')
     assert results[0] > 0.99
     assert results[1] < 1.00
