@@ -2,7 +2,6 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
 from influxdb import DataFrameClient
@@ -235,7 +234,7 @@ class DataIntegrity:
         print('Irregular Timesteps: ' + str(self.irregular_timesteps))
         print('Interruptions: ' + str(self.interruptions))
         print('Outliers: ' + str(self.outliers))
-        return
+        return()
 
 def plot_values(*args):
     plt.rcParams["figure.figsize"] = (15,6)
