@@ -12,14 +12,14 @@ def test_DI_Tools_exists():
 #    assert num > 0
 
 def test_basic_DI_compare():
-    ground_truth = DI.DataIntegrity(DI.log_to_object('ground_truth.log', 0, 2), name='ground_truth', sampled='N')
+    ground_truth = DI.DataIntegrity(DI.log_to_object('ground_truth_latest.log', 0, 2), name='ground_truth', sampled='N')
     print(ground_truth.properties(), '\n')
-    returned_data = DI.DataIntegrity(DI.csv_to_object('latest.csv', 5, 6), name='tile', sampled='N')
+    returned_data = DI.DataIntegrity(DI.csv_to_object('tile_latest.csv', 5, 6), name='tile', sampled='N')
     print(returned_data.properties(), '\n')
     results = ground_truth.compare(returned_data)
     print('\n')
     assert results[0] > 0.99
     assert results[1] < 1.00
-    print(f'The Match Score is: {round(results[0], 4)}')
+    print(f'The Match Score is: {round(results[0], 4)} %')
     print(f'The Maximum Delta is: {round(results[1], 4)}')
     print('DI Tests Passed.')
